@@ -27,6 +27,7 @@ const Feed = () => {
           Copyright 2023 Josh Pasour Youtube Clone
         </Typography>
       </Box>
+      
       <Box
         p={2}
         sx={{
@@ -42,15 +43,8 @@ const Feed = () => {
           sx={{
             color: 'white'
           }}
-        >
-          New
-          <span
-          style={{
-            color: '#fc1503'
-          }}
-          >
-            videos
-          </span>
+        > New
+          <span style={{ color: '#fc1503' }} > videos </span>
         </Typography>
 
         <Videos  videos={[]} />
