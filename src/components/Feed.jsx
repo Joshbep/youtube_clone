@@ -2,7 +2,13 @@ import { React, useState, useEffect} from 'react'
 import { Box, Stack, Typography } from '@mui/material';
 import { SideBar, Videos } from './'
 
+import { fetchFromAPI } from '../utils/fetchFromAPI';
+
 const Feed = () => {
+  useEffect(() => {
+    fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
+  }, []);
+
   return (
     <Stack
       sx={{
