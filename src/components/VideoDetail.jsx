@@ -20,6 +20,7 @@ const VideoDetail = () => {
     fetchFromAPI(`search?part=snippet&relatedToVideoId=${id}&type=video`)
       .then((data) => setVideos(data.items))
   }, [id]);
+  const { snippet: { title, channelId, channelTitle }, statistics: { viewCount, likeCount } } = videoDetail;
 
   return (
     <Box minHeight="95vh">
@@ -27,6 +28,12 @@ const VideoDetail = () => {
         <Box flex={1}>
           <Box sx={{ width: '100%', position: 'sticky', top: '86px'}}>
             <ReactPlayer url={`https://www.youtube.com/watch?v=${id}`} className="react-player" controls/>
+            <Typography color="#fff" variant="h5" fontWeight="bold" p={2} >
+              {title}
+            </Typography>
+            <Stack direction="row" justifyContent="space-between" sx={{ color: "#fff" }} py={1} px={2}>
+
+            </Stack>
           </Box>
         </Box>
       </Stack>
