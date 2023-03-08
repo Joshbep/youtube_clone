@@ -4,6 +4,7 @@ import { Paper, IconButton } from '@mui/material';
 import { Search } from '@mui/icons-material'
 
 const SearchBar = () => {
+    const [ searchTerm, setSearchTerm ] = useState("");
   return (
     <Paper
         component="form"
